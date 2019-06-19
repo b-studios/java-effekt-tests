@@ -21,7 +21,7 @@ public class SkynetSchedule implements Runnable {
     long skynet(Scheduler s, long num, int size, int div) throws Effects {
         sum = 0L; returned = 0;
 
-        if (size == 1) {
+        if (size <= 1) {
             return num;
         }
 

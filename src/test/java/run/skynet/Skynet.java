@@ -11,7 +11,7 @@ import run.fibers.*;
 public class Skynet implements Runnable {
 
     static long skynet(long num, int size, int div) throws Effects {
-        if (size == 1)
+        if (size <= 1)
             return num;
 
         Fiber<Long>[] children = new Fiber[div];

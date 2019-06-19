@@ -11,7 +11,7 @@ import run.fibers.*;
 public class SkynetSuspend implements Runnable {
 
     static long skynet(Suspendable fiber, long num, int size, int div) throws Effects {
-        if (size == 1) {
+        if (size <= 1) {
             fiber.suspend();
             return num;
         }
